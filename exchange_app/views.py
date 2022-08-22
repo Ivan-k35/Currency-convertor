@@ -22,7 +22,7 @@ def exchange(request):
 
     if request.method == 'POST':
         if request.POST.get('from-amount'):
-            from_amount = float(request.POST.get('from-amount'))
+            from_amount = request.POST.get('from-amount')
         else:
             from_amount = 0
         from_curr = request.POST.get('from-curr')
